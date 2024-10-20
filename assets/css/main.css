@@ -15,8 +15,14 @@ a{
     color: #d500f9
 }
 
+a:hover{
+    /* Del 0.0 al 1.0 es la graduación usable con esta propiedad 'opacity' */
+    opacity: 0.6;
+}
+
 .title{
     text-transform: uppercase;
+    text-align: center;
 }
 
 .container{
@@ -37,6 +43,29 @@ a{
     background-color: #fff;
     /* box-shadow: DiferenciaHorizontal - DiferenciaVertical - Desenfoque - Amplitud - Color */
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 4px;
+    position: relative;
+    padding: 1.8em;
+}
+
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: #642B73;
+    display: inline-block;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .paragraph{
@@ -63,8 +92,33 @@ a{
 }
 
 .title-item{
-    border-bottom-style: solid;
+    /* border-bottom-style: solid;
     border-width: 2px;
-    border-color: #C6426E;
-    padding-bottom: 1em;
+    border-color: #C6426E; */
+    font-size: 2em;
+    border-bottom: solid 2px #C6426E;
+    /* Shorthand Properties */
+    padding-bottom: 1em; /* TODO */
+    /* padding:  arriba derecha abajo izquierda*/
+    /* padding:  arriba/abajo derecha/izquierda*/
+}
+
+.address{
+    font-weight: bold;
+    color: #642B73;
+    font-size: 1.2em;
+}
+
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+}
+
+.position{
+    background-color: #C6426E;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 0.5em;
 }
