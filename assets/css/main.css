@@ -6,55 +6,63 @@ Gris: #f5f5f5
 Rosa: #d500f9
 */
 
-html{
+html {
     font-family: 'Nunito', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: #d500f9
 }
 
-a:hover{
+a:hover {
     /* Del 0.0 al 1.0 es la graduación usable con esta propiedad 'opacity' */
     opacity: 0.6;
 }
 
-.title{
+.title {
     text-transform: uppercase;
     text-align: center;
 }
 
-.container{
-    background: #aa4b6b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.container {
+    background: #aa4b6b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.content{
+.content {
+    /*Aca se le dice que el contenido ocupe el 100% pero que el contenido no se pase de 960px*/
+    /*Es como decirle que ocupe toda la pantalla hasta que se encuentre con esos limites*/
     max-width: 960px;
     max-height: 500px;
     width: 100%;
     height: 100%;
     background-color: #fff;
     /* box-shadow: DiferenciaHorizontal - DiferenciaVertical - Desenfoque - Amplitud - Color */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 4px;
     position: relative;
     padding: 1.8em;
+    /*overflow define como se comporta el contenido que se sale de las dimensiones del elemento*/
+    overflow: scroll;
 }
 
-.actions{
+.actions {
     position: absolute;
     top: 1em;
     right: 1em;
 }
 
-.close{
+/*En este caso esta bien que las unidades de medida esten en pixeles porque no afectan al diseño*/
+.close {
     height: 40px;
     width: 40px;
     color: white;
@@ -68,57 +76,64 @@ a:hover{
     justify-content: center;
 }
 
-.paragraph{
+.paragraph {
     line-height: 1.8em;
     font-weight: 200;
 }
 
-.fa-star{
+.fa-star {
     color: #ffc400;
 }
 
-.table{
+.table {
     width: 100%;
     border-spacing: 0;
 }
 
-.table td, .table th{
+.table td,
+.table th {
     padding: 1em;
     text-align: left;
 }
 
-.table tr:nth-child(even){
+.table tr:nth-child(even) {
     background-color: #f3e5f5;
 }
 
-.title-item{
+.title-item {
     /* border-bottom-style: solid;
     border-width: 2px;
     border-color: #C6426E; */
     font-size: 2em;
     border-bottom: solid 2px #C6426E;
     /* Shorthand Properties */
-    padding-bottom: 1em; /* TODO */
+    padding-bottom: 1em;
+    /* TODO */
     /* padding:  arriba derecha abajo izquierda*/
     /* padding:  arriba/abajo derecha/izquierda*/
 }
 
-.address{
+.address {
     font-weight: bold;
     color: #642B73;
     font-size: 1.2em;
+    /*Aca agregamos margin-top de un 1em*/
+    margin-top: 2em;
+    /*Tambien agregamos esto para poder agregar y jugar con el margen*/
+    /*En la propiedad display ignorar el margen, por eso hacemos uso de esta propiedad*/
+    display: inline-block;
 }
 
-.main-image{
+.main-image {
     float: left;
     margin-right: 1em;
     height: 250px;
 }
 
-.position{
+.position {
     background-color: #C6426E;
     color: white;
-    padding: 10px;
+    padding: 0.5em; /*Cambiamos de 10px a 0.5em para que el padding tenga una medida relativa*/
     border-radius: 4px;
     margin-right: 0.5em;
 }
