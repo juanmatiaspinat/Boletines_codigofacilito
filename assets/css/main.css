@@ -20,6 +20,10 @@ a:hover {
     opacity: 0.6;
 }
 
+img{
+    max-width: 100%;
+}
+
 .title {
     text-transform: uppercase;
     text-align: center;
@@ -42,9 +46,8 @@ a:hover {
     /*Aca se le dice que el contenido ocupe el 100% pero que el contenido no se pase de 960px*/
     /*Es como decirle que ocupe toda la pantalla hasta que se encuentre con esos limites*/
     max-width: 960px;
-    max-height: 500px;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     background-color: #fff;
     /* box-shadow: DiferenciaHorizontal - DiferenciaVertical - Desenfoque - Amplitud - Color */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -136,4 +139,28 @@ a:hover {
     padding: 0.5em; /*Cambiamos de 10px a 0.5em para que el padding tenga una medida relativa*/
     border-radius: 4px;
     margin-right: 0.5em;
+}
+
+@media (min-height:500){
+    .content{
+        height: 500px;
+    }
+}
+
+@media (max-width:600px) {
+    .content{
+        padding: 1em;
+    }
+    td{
+        display: block;
+        width: 85%;
+    }
+    td:nth-of-type(1){
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #642B73;
+    }
+    th{
+        display: none;
+    }    
 }
